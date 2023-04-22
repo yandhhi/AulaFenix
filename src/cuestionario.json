@@ -1,0 +1,85 @@
+{
+    "title": "Cuestionario de Selección Múltiple",
+    "description": "Este es un cuestionario para evaluar tus conocimientos",
+    "questions": [
+      {
+        "id": 1,
+        "text": "¿Cuál es el resultado de la suma 2 + 2?",
+        "options": [
+          {
+            "id": 1,
+            "text": "3",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "4",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "5",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "6",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "¿Cuál es la capital de Francia?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Madrid",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Roma",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "París",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Berlín",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "¿Cuál es el nombre del satélite natural de la Tierra?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Marte",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Luna",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Sol",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Venus",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  }
+  

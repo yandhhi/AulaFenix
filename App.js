@@ -8,7 +8,7 @@ import CourseContentScreen from './src/CourseContentScreen';
 import LearningRouteScreen from './src/LearningRoute';
 import QuizScreen from './src/QuizScreen';
 import Teorico from './src/Teorico';
-//import RelatedVideos from './src/RelatedVideos.tsx';
+import RelatedVideos from './src/RelatedVideos';
 import UserProfileScreen from './src/UserProfileScreen';
 
 const Stack = createStackNavigator();
@@ -24,7 +24,7 @@ const App = () => {
         <Stack.Screen name="Aprendizaje" component={LearningRouteScreen} />
         <Stack.Screen name="Quiz" component={QuizScreen} /> 
         <Stack.Screen name="Teoria" component={Teorico} />
-        {/*<Stack.Screen name="Videos" component={RelatedVideos} />*/}
+        <Stack.Screen name="Videos" component={RelatedVideos} />
         <Stack.Screen name="Perfil" component={UserProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,52 +1,50 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
-import HTML from 'react-native-render-html';
+import React from 'react';
+import { WebView } from 'react-native-webview';
+import { StyleSheet } from 'react-native';
+import Constants from 'expo-constants';
 import data from './hg.json';
 
 const Teorico = () => {
-  const [teoria, setTeoria] = useState('');
-
-  useEffect(() => {
-    const fetchTeoria = async () => {
-      try {
-        setTeoria(data.text);
-      } catch (e) {
-        console.error(e);
-      }
-    };
-
-    fetchTeoria();
-  }, []);
-
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Teórico</Text>
-      <ScrollView contentContainerStyle={styles.scrollContainer}>
-        <HTML source={{ html: teoria }} containerStyle={styles.htmlContainer} />
-      </ScrollView>
-    </View>
+    <WebView
+      style={styles.container}
+      containerStyle={styles.webViewContainer}
+      contentInset={{ top: 0, right: 0, bottom: 0, left: 0 }}
+      originWhitelist={['*']}
+      source={{
+        html: `
+          <style>
+            /* Agregar estilos personalizados aquí */
+            body {
+              font-size: 45px;
+            }
+            img {
+              max-width: 80%;
+              height: auto;
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+            }
+          </style>
+          ${data.text}
+        `
+      }}
+    />
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: Constants.statusBarHeight,
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    marginBottom: 10,
-  },
-  scrollContainer: {
-    paddingHorizontal: 10,
-    paddingTop: 10,
-    paddingBottom: 20,
-  },
-  htmlContainer: {
-    marginHorizontal: 10,
+  webViewContainer: {
+    flex: 1,
+    margin: 10,
+    borderWidth: 1,
+    borderColor: 'gray',
+    borderRadius: 10,
+    overflow: 'hidden',
   },
 });
 
