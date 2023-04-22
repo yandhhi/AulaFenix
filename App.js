@@ -17,9 +17,9 @@ const App = () => {
   return (
    <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Inicio" component={LoginScreen} />
+        <Stack.Screen name="Inicio" component={LoginScreen} options={{headerShown: false}}/>
         <Stack.Screen name="Recuperar Contraseña" component={ForgotPasswordScreen} />
-        <Stack.Screen name="Mis cursos" component={MyCoursesScreen} />
+        <Stack.Screen name="Mis cursos" component={MyCoursesScreen} options={{headerShown: false}} />
         <Stack.Screen name="Contenido" component={CourseContentScreen} />
         <Stack.Screen name="Aprendizaje" component={LearningRouteScreen} />
         <Stack.Screen name="Quiz" component={QuizScreen} /> 
