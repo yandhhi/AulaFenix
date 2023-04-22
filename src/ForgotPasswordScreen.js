@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { auth } from './firebaseConfig';
+import { sendPasswordResetEmail } from 'firebase/auth';
+
 
 const ForgotPasswordScreen = () => {
   const [email, setEmail] = useState('');
 
   const handleResetPassword = () => {
-    // Aquí se maneja la lógica para enviar un correo electrónico de restablecimiento de contraseña
+    sendPasswordResetEmail(auth, email, {
+      url: 'https://aulafenix-27298.firebaseapp.com/__/auth/action',
+      handleCodeInApp: true,
+    })
+      .then(() => {
+        alert('Se ha enviado un correo electrónico para restablecer su contraseña');
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
   return (

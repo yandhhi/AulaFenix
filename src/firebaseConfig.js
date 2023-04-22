@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
 
 // Optionally import the services that you want to use
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth} from "firebase/auth";
 
 // Initialize Firebase
 const firebaseConfig = {
