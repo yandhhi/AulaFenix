@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "name": "Matemáticas",
+      "teacher": "Juan Pérez",
+      "description": "Aprende los conceptos básicos de programación con este curso introductorio.",
+      "image": "./assets/splash.png",
+      "modules": [
+        {
+          "id": 1,
+          "name": "Introducción a las matemáticas",
+          "description": "En esta lección, aprenderás los conceptos básicos de las matemáticas.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 2,
+          "name": "Álgebra",
+          "description": "En esta lección, aprenderás los conceptos básicos del álgebra.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 3,
+          "name": "Geometría",
+          "description": "En esta lección, aprenderás los conceptos básicos de la geometría.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Inglés",
+      "teacher": "María Gómez",
+      "description": "Aprende a desarrollar aplicaciones móviles para iOS y Android con React Native.",
+      "image": "./assets/splash.png",
+      "modules": [
+        {
+          "id": 1,
+          "name": "Introducción al idioma inglés",
+          "description": "En esta lección, aprenderás los conceptos básicos del idioma inglés.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 2,
+          "name": "Gramática inglesa",
+          "description": "En esta lección, aprenderás los conceptos básicos de la gramática inglesa.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 3,
+          "name": "Vocabulario inglés",
+          "description": "En esta lección, aprenderás el vocabulario básico en inglés.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Castellano",
+      "teacher": "Pedro García",
+      "description": "Aprende a diseñar sitios web avanzados con HTML, CSS y JavaScript.",
+      "image": "./assets/splash.png",
+      "modules": [
+        {
+          "id": 1,
+          "name": "Introducción al idioma castellano",
+          "description": "En esta lección, aprenderás los conceptos básicos del idioma castellano.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 2,
+          "name": "Gramática castellana",
+          "description": "En esta lección, aprenderás los conceptos básicos de la gramática cast" }
+        ]}]
+  
