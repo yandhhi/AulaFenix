@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
-    backgroundColor: '#ffc107',
+    backgroundColor: '#859bed',
     marginLeft: 10,
   },
   buttonText: {
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   courseContainer: {
-    backgroundColor: '#ffc107',
+    backgroundColor: '#859bed',
     padding: 20,
     marginVertical: 10,
     borderRadius: 10,

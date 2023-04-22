@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
+import { auth } from './firebaseConfig';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    email == "1" && password == "1" ? (
-      navigation.navigate('Mis cursos')
-      ) : (
-        alert('Login failed'));
-    
-  
-    // Aquí se maneja la lógica para iniciar sesión
+    signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      navigation.navigate('Mis cursos');
+    })
+    .catch((error) => {
+      alert(error.message);
+    });
   };
 
   const handleForgotPassword = () => {
@@ -62,6 +64,7 @@ const LoginScreen = ({ navigation }) => {
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
