@@ -9,30 +9,27 @@ const MyCoursesScreen = () => {
   const [courses, setCourses] = useState([]);
   const route = useRoute();
   const userId = route.params.userId;
+  const [pensum, setPensum] = useState([]);
   
-    
   useEffect(() => {
 
-    const jsonRef = ref(storage, 'estudiantes.json');
-    getDownloadURL(jsonRef)
-    .then(url => {
-      fetch(url)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
+    const findEst = ref(storage, 'estudiantes.json');
+  
+    getDownloadURL(findEst)
+    .then((url) => fetch(url))
+    .then((response) => response.json())
+    .then((data) => {
+      const userData = data.find((user) => user.userId === userId);
+      console.log(userData.pensum);
+      setPensum(userData.pensum);
     })
-
-    
-
+    .catch((error) => {
+      console.log("Error al buscar datos de usuario:", error);
+    });
+  
     setCourses(coursesData);
-    console.log(userId)
-
-    // Aquí se hace la llamada a la API para obtener la lista de cursos del usuario
-    // y se actualiza el estado con los datos obtenidos
-    /*  fetch("https://api.example.com/courses")
-    .then(response => response.json())
-    .then(data => setCourses(data))
-    .catch(error => console.log(error)); */
+    console.log(userId);
+  
   }, []);
 
   const navigation = useNavigation();
