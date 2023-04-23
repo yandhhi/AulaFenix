@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { auth } from './firebaseConfig';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth, signIn } from './firebaseConfig';
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    signInWithEmailAndPassword(auth, email, password)
+    signIn(auth, email, password)
     .then((userCredential) => {
       navigation.navigate('Mis cursos', { userId: userCredential.user.uid });
 

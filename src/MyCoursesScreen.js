@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import { storage, ref, getDownloadURL } from './firebaseConfig';
 
 import coursesData from './courses.json';
 
@@ -8,8 +9,20 @@ const MyCoursesScreen = () => {
   const [courses, setCourses] = useState([]);
   const route = useRoute();
   const userId = route.params.userId;
-
+  
+    
   useEffect(() => {
+
+    const jsonRef = ref(storage, 'estudiantes.json');
+    getDownloadURL(jsonRef)
+    .then(url => {
+      fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+    })
+
+    
 
     setCourses(coursesData);
     console.log(userId)
