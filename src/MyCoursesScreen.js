@@ -34,10 +34,10 @@ const MyCoursesScreen = () => {
       };
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.courseContainer}
-     onPress={() => handleCoursePress(item.id)}>
-      <Text style={styles.courseName}>{item.name}</Text>
-    </TouchableOpacity>
+    <TouchableOpacity style={styles.courseContainer} onPress={() => handleCoursePress(item.id)}>
+    <Text style={styles.courseName}>{item.name}</Text>
+    <Text style={styles.courseDescription}>{item.description}</Text>
+  </TouchableOpacity>
   );
 
   return (
@@ -117,12 +117,18 @@ const styles = StyleSheet.create({
     elevation: 5,
     width: '80%',
     alignSelf: 'center',
-    marginHorizontal: 75,
+    marginHorizontal: 45,
   },
   courseName: {
     fontSize: 20,
     fontWeight: 'bold',
     color: '#fff',
+    textAlign: 'center'
+  },
+  courseDescription: {
+    fontSize: 16,
+    color: '#fff',
+    marginTop: 10,
     textAlign: 'center'
   },
 });

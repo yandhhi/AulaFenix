@@ -1,0 +1,126 @@
+[
+    {
+      "id": 1001,
+      "name": "Matemáticas",
+      "description": "Aprende conceptos de matemáticas desde cero con este curso introductorio.",
+      "modules": [
+        {
+          "id": 1,
+          "name": "Introducción a las matemáticas",
+          "description": "En esta lección, aprenderás los conceptos básicos de las matemáticas.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 2,
+          "name": "Álgebra",
+          "description": "En esta lección, aprenderás los conceptos básicos del álgebra.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 3,
+          "name": "Geometría",
+          "description": "En esta lección, aprenderás los conceptos básicos de la geometría.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+      ]
+    },
+    {
+      "id": 2001,
+      "name": "Inglés",
+      "teacher": "María Gómez",
+      "description": "Aprende a desarrollar aplicaciones móviles para iOS y Android con React Native.",
+      "modules": [
+        {
+          "id": 1,
+          "name": "Introducción al idioma inglés",
+          "description": "En esta lección, aprenderás los conceptos básicos del idioma inglés.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 2,
+          "name": "Gramática inglesa",
+          "description": "En esta lección, aprenderás los conceptos básicos de la gramática inglesa.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 3,
+          "name": "Vocabulario inglés",
+          "description": "En esta lección, aprenderás el vocabulario básico en inglés.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+      ]
+    },
+    {
+      "id": 3001,
+      "name": "Castellano",
+      "teacher": "Pedro García",
+      "description": "Aprende a diseñar sitios web avanzados con HTML, CSS y JavaScript.",
+      "modules": [
+        {
+          "id": 1,
+          "name": "Introducción al idioma castellano",
+          "description": "En esta lección, aprenderás los conceptos básicos del idioma castellano.",
+          "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": 2,
+          "name": "Gramática castellana",
+          "description": "En esta lección, aprenderás los conceptos básicos de la gramática cast" }
+        ]},
+        {
+            "id": 4001,
+            "name": "Ciencias Naturales",
+            "description": "Explora el mundo natural y aprende sobre biología, química, física y más con este curso introductorio.",
+            "modules": [
+            {
+            "id": 1,
+            "name": "Biología",
+            "description": "En esta lección, aprenderás los conceptos básicos de la biología.",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+            "id": 2,
+            "name": "Química",
+            "description": "En esta lección, aprenderás los conceptos básicos de la química.",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+            "id": 3,
+            "name": "Física",
+            "description": "En esta lección, aprenderás los conceptos básicos de la física.",
+            "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            }
+            ]
+            },
+            {
+                "id": 5001,
+                "name": "Historia del Arte",
+                "description": "Explora la evolución del arte a lo largo de la historia, desde el arte prehistórico hasta el arte contemporáneo.",
+                "modules": [
+                  {
+                    "id": 1,
+                    "name": "Arte prehistórico",
+                    "description": "En esta lección, explorarás el arte de las culturas prehistóricas, incluyendo las pinturas rupestres y las esculturas de la Edad de Piedra.",
+                    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  },
+                  {
+                    "id": 2,
+                    "name": "Arte antiguo",
+                    "description": "En esta lección, descubrirás el arte de las culturas antiguas, como la Grecia Clásica y el Imperio Romano.",
+                    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  },
+                  {
+                    "id": 3,
+                    "name": "Arte medieval",
+                    "description": "En esta lección, aprenderás sobre el arte de la Edad Media, desde el arte románico hasta el gótico.",
+                    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  },
+                  {
+                    "id": 4,
+                    "name": "Arte moderno",
+                    "description": "En esta lección, explorarás el arte de la época moderna, desde el Renacimiento hasta el arte contemporáneo.",
+                    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  }
+                ]
+              }
+              ]
