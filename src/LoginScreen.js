@@ -9,8 +9,10 @@ const LoginScreen = ({ navigation }) => {
 
   const handleLogin = () => {
     signInWithEmailAndPassword(auth, email, password)
-    .then(() => {
-      navigation.navigate('Mis cursos');
+    .then((userCredential) => {
+      navigation.navigate('Mis cursos', { userId: userCredential.user.uid });
+
+      
     })
     .catch((error) => {
       alert(error.message);

@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
+
 import coursesData from './courses.json';
 
 const MyCoursesScreen = () => {
   const [courses, setCourses] = useState([]);
+  const route = useRoute();
+  const userId = route.params.userId;
 
   useEffect(() => {
 
     setCourses(coursesData);
+    console.log(userId)
 
     // Aquí se hace la llamada a la API para obtener la lista de cursos del usuario
     // y se actualiza el estado con los datos obtenidos
