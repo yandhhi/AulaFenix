@@ -1,0 +1,20 @@
+{"modules": [
+    {
+      "id": 1,
+      "name": "Introducción al idioma inglés",
+      "description": "En esta lección, aprenderás los conceptos básicos del idioma inglés.",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": 2,
+      "name": "Gramática inglesa",
+      "description": "En esta lección, aprenderás los conceptos básicos de la gramática inglesa.",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": 3,
+      "name": "Vocabulario inglés",
+      "description": "En esta lección, aprenderás el vocabulario básico en inglés.",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  ]}

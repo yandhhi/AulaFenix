@@ -1,0 +1,26 @@
+{"modules": [
+    {
+      "id": 1,
+      "name": "Arte prehistórico",
+      "description": "En esta lección, explorarás el arte de las culturas prehistóricas, incluyendo las pinturas rupestres y las esculturas de la Edad de Piedra.",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": 2,
+      "name": "Arte antiguo",
+      "description": "En esta lección, descubrirás el arte de las culturas antiguas, como la Grecia Clásica y el Imperio Romano.",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": 3,
+      "name": "Arte medieval",
+      "description": "En esta lección, aprenderás sobre el arte de la Edad Media, desde el arte románico hasta el gótico.",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": 4,
+      "name": "Arte moderno",
+      "description": "En esta lección, explorarás el arte de la época moderna, desde el Renacimiento hasta el arte contemporáneo.",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+  ]}

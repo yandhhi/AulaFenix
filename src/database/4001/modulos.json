@@ -1,0 +1,20 @@
+{"modules": [
+    {
+    "id": 1,
+    "name": "Biología",
+    "description": "En esta lección, aprenderás los conceptos básicos de la biología.",
+    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+    "id": 2,
+    "name": "Química",
+    "description": "En esta lección, aprenderás los conceptos básicos de la química.",
+    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+    "id": 3,
+    "name": "Física",
+    "description": "En esta lección, aprenderás los conceptos básicos de la física.",
+    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    }
+    ]}

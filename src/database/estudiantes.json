@@ -1,11 +1,11 @@
 [{   "userId": "twCk25e8OJSNRA1cXj5NmG9j1Nl2",
     "nombre": "Juan",
     "apellido": "Pérez",
-    "pensum" : ["1001","2001","3001"]
+    "pensum" : [1001,2001,3001]
   },
 
   {   "userId": "twCk25e8OJSNRA1cXj5NmG9j1N17",
     "nombre": "María",
     "apellido": "García",
-    "pensum" : ["5001","4001","3001"]
+    "pensum" : [5001,4001,3001]
   }]

@@ -1,0 +1,12 @@
+{"modules": [
+    {
+      "id": 1,
+      "name": "Introducción al idioma castellano",
+      "description": "En esta lección, aprenderás los conceptos básicos del idioma castellano.",
+      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+      "id": 2,
+      "name": "Gramática castellana",
+      "description": "En esta lección, aprenderás los conceptos básicos de la gramática cast" }
+    ]}

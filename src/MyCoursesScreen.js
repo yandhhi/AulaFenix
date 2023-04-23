@@ -3,64 +3,94 @@ import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { storage, ref, getDownloadURL } from './firebaseConfig';
 
-import coursesData from './courses.json';
-
 const MyCoursesScreen = () => {
   const [courses, setCourses] = useState([]);
   const route = useRoute();
   const userId = route.params.userId;
   const [pensum, setPensum] = useState([]);
-  
-  useEffect(() => {
 
+  useEffect(() => {
     const findEst = ref(storage, 'estudiantes.json');
-  
+    const pensumRef = ref(storage, 'pensum.json');
+    console.log(userId)
     getDownloadURL(findEst)
-    .then((url) => fetch(url))
-    .then((response) => response.json())
-    .then((data) => {
-      const userData = data.find((user) => user.userId === userId);
-      console.log(userData.pensum);
-      setPensum(userData.pensum);
-    })
-    .catch((error) => {
-      console.log("Error al buscar datos de usuario:", error);
-    });
-  
-    setCourses(coursesData);
-    console.log(userId);
-  
+      .then((url) => fetch(url))
+      .then((response) => response.json())
+      .then((data) => {
+        const userData = data.find((user) => user.userId === userId); 
+        setPensum(userData.pensum);
+        console.log(pensum);
+
+        const filterCourses = () => {
+          const fetchCourses = () => {
+            getDownloadURL(pensumRef)
+              .then((url) => {
+                fetch(url)
+                  .then((response) => response.json())
+                  .then((data) => {
+                    const filteredCourses = data.filter((course) =>
+                      pensum.includes(course.id)
+                    );
+                    if (filteredCourses.length === 0) {
+                      fetchCourses(); // Hacer petición de nuevo si la lista está vacía
+                    } else {
+                      setCourses(filteredCourses);
+                      console.log(filteredCourses);
+                    }
+                  })
+                  .catch((error) => {
+                    console.log(
+                      'Error al obtener los datos del archivo pensum.json:',
+                      error
+                    );
+                  });
+              })
+              .catch((error) => {
+                console.log(
+                  'Error al obtener la URL de descarga del archivo pensum.js:',
+                  error
+                );
+              });
+          };
+          fetchCourses();
+        };
+
+        filterCourses();
+      })
+      .catch((error) => {
+        console.log('Error al buscar datos de usuario:', error);
+      });
+
   }, []);
 
   const navigation = useNavigation();
-  
+
   const handleCoursePress = (courseId) => {
     navigation.navigate('Contenido', { courseId});
   };
 
   const handlePerfil = () => {
     navigation.navigate('Perfil');
-        // Aquí se navega a la pantalla de perfil
-      };
+  };
 
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.courseContainer} onPress={() => handleCoursePress(item.id)}>
-    <Text style={styles.courseName}>{item.name}</Text>
-    <Text style={styles.courseDescription}>{item.description}</Text>
-  </TouchableOpacity>
+      <Text style={styles.courseName}>{item.name}</Text>
+      <Text style={styles.courseDescription}>{item.description}</Text>
+    </TouchableOpacity>
   );
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-  <TouchableOpacity style={styles.button}>
-    <Text style={styles.buttonText} onPress={handlePerfil}>Perfil</Text>
-  </TouchableOpacity>
-  <TouchableOpacity style={styles.button}>
-    <Text style={styles.buttonText}>Logout</Text>
-  </TouchableOpacity>
-</View>  
-    <Text style={styles.title}>Mis cursos</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText} onPress={handlePerfil}>Perfil</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.buttonText}>Logout</Text>
+        </TouchableOpacity>
+      </View>  
+      <Text style={styles.title}>Mis cursos</Text>
       <FlatList
         data={courses}
         renderItem={renderItem}
@@ -127,7 +157,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     width: '80%',
     alignSelf: 'center',
-    marginHorizontal: 45,
+    marginHorizontal: 40,
   },
   courseName: {
     fontSize: 20,
