@@ -10,7 +10,7 @@ const LoginScreen = ({ navigation }) => {
     signIn(auth, email, password)
     .then((userCredential) => {
       navigation.navigate('Mis cursos', { userId: userCredential.user.uid });
-
+  
       
     })
     .catch((error) => {
