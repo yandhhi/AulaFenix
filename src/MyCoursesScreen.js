@@ -12,7 +12,7 @@ const MyCoursesScreen = () => {
   useEffect(() => {
     const findEst = ref(storage, 'estudiantes.json');
     const pensumRef = ref(storage, 'pensum.json');
-    console.log(userId)
+
     getDownloadURL(findEst)
       .then((url) => fetch(url))
       .then((response) => response.json())
@@ -20,48 +20,42 @@ const MyCoursesScreen = () => {
         const userData = data.find((user) => user.userId === userId); 
         setPensum(userData.pensum);
         console.log(pensum);
-
-        const filterCourses = () => {
-          const fetchCourses = () => {
-            getDownloadURL(pensumRef)
-              .then((url) => {
-                fetch(url)
-                  .then((response) => response.json())
-                  .then((data) => {
-                    const filteredCourses = data.filter((course) =>
-                      pensum.includes(course.id)
-                    );
-                    if (filteredCourses.length === 0) {
-                      fetchCourses(); // Hacer petición de nuevo si la lista está vacía
-                    } else {
-                      setCourses(filteredCourses);
-                      console.log(filteredCourses);
-                    }
-                  })
-                  .catch((error) => {
-                    console.log(
-                      'Error al obtener los datos del archivo pensum.json:',
-                      error
-                    );
-                  });
-              })
-              .catch((error) => {
-                console.log(
-                  'Error al obtener la URL de descarga del archivo pensum.js:',
-                  error
-                );
-              });
-          };
-          fetchCourses();
-        };
-
-        filterCourses();
       })
       .catch((error) => {
         console.log('Error al buscar datos de usuario:', error);
       });
-
   }, []);
+
+  useEffect(() => {
+    if (pensum.length > 0) {
+      const fetchCourses = () => {
+        const pensumRef = ref(storage, 'pensum.json');
+
+        getDownloadURL(pensumRef)
+          .then((url) => fetch(url))
+          .then((response) => response.json())
+          .then((data) => {
+            const filteredCourses = data.filter((course) =>
+              pensum.includes(course.id)
+            );
+            if (filteredCourses.length === 0) {
+              fetchCourses();
+            } else {
+              setCourses(filteredCourses);
+              console.log(filteredCourses);
+            }
+          })
+          .catch((error) => {
+            console.log(
+              'Error al obtener los datos del archivo pensum.json:',
+              error
+            );
+          });
+      };
+
+      fetchCourses();
+    }
+  }, [pensum]);
 
   const navigation = useNavigation();
 
@@ -92,7 +86,8 @@ const MyCoursesScreen = () => {
       </View>  
       <Text style={styles.title}>Mis cursos</Text>
       <FlatList
-        data={courses}
+        data={courses
+}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
       />
