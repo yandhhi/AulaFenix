@@ -2,70 +2,73 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { auth, signIn } from './firebaseConfig';
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({ route, navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showForm, setShowForm] = useState(false);
+  const materias = route.params?.filteredPensum;
 
   const handleLogin = () => {
     signIn(auth, email, password)
-    .then((userCredential) => {
-      navigation.navigate('Mis cursos', { userId: userCredential.user.uid });
-  
-      
-    })
-    .catch((error) => {
-      alert(error.message);
-    });
+      .then((userCredential) => {
+        navigation.navigate('Sincronizar', { userId: userCredential.user.uid });
+        setShowForm(!showForm);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
-  const handleForgotPassword = () => {
-    navigation.navigate('Recuperar Contraseña');
+  const handleToggleForm = () => {
+    setShowForm(!showForm);
+  };
+
+  const handleAccessAula = () => {
+    navigation.navigate('Mis cursos', { materias });
   };
 
   return (
     <View style={styles.container}>
-      <View style={styles.logoContainer}>
-        <Image
-          source={require('./assets/Header.jpg')}
-          style={styles.logo}
-        />
-      </View>
-      <Text style={styles.label}>Ingrese su usuario y contraseña</Text>
-      <View style={styles.inputContainer}>
-        <Image
-          source={require('./assets/icon.png')}
-          style={styles.inputIcon}
-        />
-        <TextInput
-          placeholder="Usuario"
-          value={email}
-          onChangeText={(text) => setEmail(text)}
-          style={styles.input}
-        />
-      </View>
-      <View style={styles.inputContainer}>
-        <Image
-          source={require('./assets/icon.png')}
-          style={styles.inputIcon}
-        />
-        <TextInput
-          placeholder="Contraseña"
-          value={password}
-          onChangeText={(text) => setPassword(text)}
-          secureTextEntry={true}
-          style={styles.input}
-        />
-      </View>
-      <TouchableOpacity onPress={handleLogin} style={styles.button}>
-        <Text style={styles.buttonText}>Iniciar sesión</Text>
+      <TouchableOpacity onPress={handleToggleForm} style={styles.button}>
+        <Text style={styles.buttonText}>Sincronizar Aula</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={handleForgotPassword} style={styles.forgotPasswordButton}>
-        <Text style={styles.forgotPasswordButtonText}>¿Olvidaste tu contraseña?</Text>
+      {showForm && (
+        <View style={styles.formContainer}>
+          <Text style={styles.label}>Credenciales de Aula</Text>
+          <View style={styles.inputContainer}>
+            <Image source={require('./assets/icon.png')} style={styles.inputIcon} />
+            <TextInput
+              placeholder="Usuario"
+              value={email}
+              onChangeText={(text) => setEmail(text)}
+              style={styles.input}
+            />
+          </View>
+          <View style={styles.inputContainer}>
+            <Image source={require('./assets/icon.png')} style={styles.inputIcon} />
+            <TextInput
+              placeholder="Contraseña"
+              value={password}
+              onChangeText={(text) => setPassword(text)}
+              secureTextEntry={true}
+              style={styles.input}
+            />
+          </View>
+          <TouchableOpacity onPress={handleLogin} style={styles.button}>
+            <Text style={styles.buttonText}>Sincronizar</Text>
+          </TouchableOpacity>
+        </View>
+      )}
+      <View style={styles.logoContainer}>
+        <Image source={require('./assets/Header.jpg')} style={styles.logo} />
+      </View>
+      <TouchableOpacity onPress={handleAccessAula} style={styles.button}>
+        <Text style={styles.buttonText}>Acceso Aula</Text>
       </TouchableOpacity>
     </View>
-  );
-};
+);
 
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -82,10 +85,18 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
   },
+  formContainer: {
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    borderRadius: 10,
+    paddingHorizontal: 30,
+    marginBottom: 20,
+  },
   label: {
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 20,
+    marginTop: 20,
+    textAlign: 'center',
   },
   inputContainer: {
     flexDirection: 'row',
@@ -93,7 +104,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#ccc',
     borderRadius: 5,
-    paddingHorizontal: 10,
+    width: 250,
     marginBottom: 20,
   },
   inputIcon: {
@@ -111,17 +122,14 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderRadius: 5,
     marginBottom: 20,
+    alignSelf: 'center',
+    width: 200,
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
-  },
-  forgotPasswordButton: {
-    alignSelf: 'flex-end',
-  },
-  forgotPasswordButtonText: {
-    color: 'blue',
+    textAlign: 'center',
   },
 });
 

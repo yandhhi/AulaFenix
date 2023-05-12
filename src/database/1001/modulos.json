@@ -1,20 +1,17 @@
-{"modules": [
+[
     {
       "id": 1,
       "name": "Introducción a las matemáticas",
-      "description": "En esta lección, aprenderás los conceptos básicos de las matemáticas.",
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "description": "En esta lección, aprenderás los conceptos básicos de las matemáticas."
     },
     {
       "id": 2,
       "name": "Álgebra",
-      "description": "En esta lección, aprenderás los conceptos básicos del álgebra.",
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "description": "En esta lección, aprenderás los conceptos básicos del álgebra."
     },
     {
       "id": 3,
       "name": "Geometría",
-      "description": "En esta lección, aprenderás los conceptos básicos de la geometría.",
-      "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      "description": "En esta lección, aprenderás los conceptos básicos de la geometría."
     }
-  ]}
+  ]
