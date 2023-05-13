@@ -2,9 +2,12 @@ import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import * as SecureStore from 'expo-secure-store';
 import { storage, ref, getDownloadURL } from './firebaseConfig';
+import { useDispatch } from 'react-redux';
+import { setFilteredPensum } from './actions';
 
 const SyncScreen = ({ route, navigation }) => {
   const { userId } = route.params;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const loadData = async () => {
@@ -33,10 +36,12 @@ const SyncScreen = ({ route, navigation }) => {
         console.log('Datos cargados desde Firebase Storage y almacenados localmente.');
         console.log('Información almacenada localmente:', filteredPensum);
         console.log(userId);
-
         alert('Sincronización Éxitosa');
-        navigation.navigate('Inicio', { filteredPensum });
 
+        // Almacenar los valores filtrados en Redux
+        dispatch(setFilteredPensum(filteredPensum));
+
+        navigation.navigate('Inicio');
       } catch (error) {
         console.log('Error al cargar los datos desde Firebase Storage:', error);
       }
@@ -45,6 +50,11 @@ const SyncScreen = ({ route, navigation }) => {
     loadData();
   }, []);
 
+  return (
+    <View>
+      <Text>Componente para cargar datos de forma offline</Text>
+    </View>
+  );
 };
 
 export default SyncScreen;
