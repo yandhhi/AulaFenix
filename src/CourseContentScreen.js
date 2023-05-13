@@ -5,10 +5,13 @@ import { storage, ref, getDownloadURL } from './firebaseConfig';
 
 const CourseContentScreen = ({ route, navigation }) => {
   const { courseId } = route.params;
+  const { modulos } = route.params;
   const [modules, setModules] = useState([]);
 
   useEffect(() => {
     const modulesRef = ref(storage, `cursos/${courseId}/modulos.json`);
+    console.log(courseId)
+    console.log('Modulos desde contenidos', modulos)
 
     getDownloadURL(modulesRef)
       .then((url) => fetch(url))

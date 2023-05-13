@@ -27,15 +27,28 @@ const SyncScreen = ({ route, navigation }) => {
           .filter(item => filteredGrupos.some(grupo => grupo.pensum.includes(item.id)))
           .map(item => ({ id: item.id, name: item.name, description: item.description }));
 
+        // Obtener los valores de "modulos.json" para cada grupo filtrado
+        const modulesPromises = filteredPensum.map(async item => {
+          const modulesResponse = await getDownloadURL(ref(storage, `cursos/${item.id}/modulos.json`));
+          const modulesData = await fetch(modulesResponse);
+          const modulesJson = await modulesData.json();
+          return modulesJson;
+        });
+        const modulesData = await Promise.all(modulesPromises);
+
         // Almacenar los valores filtrados en SecureStore
         await SecureStore.setItemAsync('coursesData', JSON.stringify(filteredPensum));
+        await SecureStore.setItemAsync('modulesData', JSON.stringify(modulesData));
 
-        console.log('Datos cargados desde Firebase Storage y almacenados localmente.');
-        console.log('Información almacenada localmente:', filteredPensum);
+        
         console.log(userId);
+        console.log('Datos cargados desde Firebase Storage y almacenados localmente.');
+        console.log('Información almacenada localmente (filteredPensum):', filteredPensum);
+        console.log('Información almacenada localmente (modulesData):', modulesData);
+
 
         alert('Sincronización Éxitosa');
-        navigation.navigate('Inicio', { filteredPensum });
+        navigation.navigate('Inicio', { filteredPensum, modulesData });
 
       } catch (error) {
         console.log('Error al cargar los datos desde Firebase Storage:', error);
