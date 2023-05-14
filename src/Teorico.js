@@ -2,9 +2,13 @@ import React from 'react';
 import { WebView } from 'react-native-webview';
 import { StyleSheet } from 'react-native';
 import Constants from 'expo-constants';
-import data from './hg.json';
+import { useRoute } from '@react-navigation/native';
 
 const Teorico = () => {
+  const route = useRoute();
+  const teoria = route.params?.teoria;
+  const text = teoria[0].text; // Acceder al valor de text
+
   return (
     <WebView
       style={styles.container}
@@ -26,7 +30,7 @@ const Teorico = () => {
               margin-right: auto;
             }
           </style>
-          ${data.text}
+          ${text}
         `
       }}
     />

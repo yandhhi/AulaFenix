@@ -1,0 +1,138 @@
+{
+    "quizid": 20011,
+    "name": "Introducción al idioma inglés",
+    "description": "En esta lección, aprenderás los conceptos básicos del idioma inglés.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "What is the English word for 'hola'?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Hello",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Goodbye",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Thank you",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Please",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "How do you say 'gracias' in English?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Hello",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Goodbye",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Thank you",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Please",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "What is the correct spelling of the word 'cat'?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Catte",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Katt",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Cat",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Ket",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Which word means 'amigo' in English?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Friend",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Family",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "School",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "House",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "What is the correct order of the alphabet?",
+        "options": [
+          {
+            "id": 1,
+            "text": "ABC",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "XYZ",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "LMN",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "ABCDEF...XYZ",
+            "isCorrect": true
+          }
+        ]
+      }
+    ]
+  }
+  

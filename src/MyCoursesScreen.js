@@ -6,6 +6,9 @@ const MyCoursesScreen = () => {
   const [courses, setCourses] = useState([]);
   const route = useRoute();
   const materias = route.params?.materias;
+  const modulos = route.params?.modulos;
+  const teoria = route.params?.teoria;
+  const quiz = route.params?.quiz;
 
   useEffect(() => {
     setCourses(materias);
@@ -14,9 +17,8 @@ const MyCoursesScreen = () => {
   const navigation = useNavigation();
 
   const handleCoursePress = (courseId) => {
-    navigation.navigate('Contenido', { courseId });
+    navigation.navigate('Contenido', { courseId, modulos, teoria, quiz });
   };
-
 
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.courseContainer} onPress={() => handleCoursePress(item.id)}>
@@ -35,33 +37,51 @@ const MyCoursesScreen = () => {
       />
     </View>
   );
+
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f7f7f7',
+    marginTop: 20
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 10,
+    marginVertical: 10,
   },
   courseContainer: {
-    marginBottom: 10,
+    backgroundColor: '#859bed',
     padding: 10,
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 5,
+    marginVertical: 10,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    width: '80%',
+    alignSelf: 'center',
+    marginHorizontal: 40,
   },
   courseName: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center'
   },
   courseDescription: {
-    marginTop: 5,
-    color: '#666',
-  },
+    fontSize: 16,
+    color: '#fff',
+    marginTop: 10,
+    textAlign: 'center'
+  }
 });
 
 export default MyCoursesScreen;

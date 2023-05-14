@@ -1,0 +1,137 @@
+{
+  "quizid": 10013,
+  "name": "Geometría",
+  "description": "En esta lección, aprenderás los conceptos básicos de la geometría.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Cuántos lados tiene un triángulo equilátero?",
+      "options": [
+        {
+          "id": 1,
+          "text": "2",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "3",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "4",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "5",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Cuál es el área de un cuadrado con lado de longitud 8 unidades?",
+      "options": [
+        {
+          "id": 1,
+          "text": "16",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "32",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "48",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "64",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Cuál es el perímetro de un rectángulo con lados de longitud 5 y 8 unidades?",
+      "options": [
+        {
+          "id": 1,
+          "text": "10",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "18",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "26",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "26",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Cuál es el área de un círculo con radio de longitud 6 unidades? (Usa π ≈ 3.14)",
+      "options": [
+        {
+          "id": 1,
+          "text": "36π",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "text": "12π",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "18π",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "24π",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Cuál es el volumen de un cubo con arista de longitud 4 unidades?",
+      "options": [
+        {
+          "id": 1,
+          "text": "8",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "16",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "16",
+          "isCorrect": false
+          },
+          {
+          "id": 4,
+          "text": "32",
+          "isCorrect": true
+          }
+          ]
+          }
+          ]
+          }

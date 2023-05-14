@@ -1,0 +1,112 @@
+{
+    "quizid": 20012,
+    "name": "Gramática inglesa",
+    "description": "En esta lección, aprenderás los conceptos básicos de la gramática inglesa.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "Which sentence is in the present simple tense?",
+        "options": [
+          {
+            "id": 1,
+            "text": "I will go to the store tomorrow.",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "She is eating dinner right now.",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "He plays soccer every weekend.",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "They have studied for the test.",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "What is the comparative form of 'good'?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Gooder",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Better",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Goodest",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "More good",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Which word is a pronoun?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Run",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "House",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "He",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Quickly",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "What is the past participle of the verb 'eat'?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Eating",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Eaten",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Ate",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Eats",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  }
+  

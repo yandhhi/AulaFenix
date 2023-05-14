@@ -1,8 +1,11 @@
 import React, { useState, useRef } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
-import cuestionario from './cuestionario.json';
+import { useRoute } from '@react-navigation/native';
 
 const QuizScreen = () => {
+  const route = useRoute();
+  const quiz = route.params?.quiz;
+  const cuestionario = quiz[0];
   const [questions, setQuestions] = useState(cuestionario.questions);
   const [answers, setAnswers] = useState([]);
   const scrollViewRef = useRef(null);

@@ -1,0 +1,163 @@
+{
+  "quizid": 10012,
+  "name": "Álgebra",
+  "description": "En esta lección, aprenderás los conceptos básicos del álgebra.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Cuál es el resultado de la expresión algebraica 3x + 2y cuando x = 4 e y = 5?",
+      "options": [
+        {
+          "id": 1,
+          "text": "10",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "18",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "22",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "23",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Cuál es el valor de x en la ecuación 2x + 7 = 15?",
+      "options": [
+        {
+          "id": 1,
+          "text": "4",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "text": "5",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "6",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "7",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Cuál es el resultado de la simplificación de la expresión algebraica 2(x + 3) - 5x?",
+      "options": [
+        {
+          "id": 1,
+          "text": "-x + 6",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "-3x + 6",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "-3x + 6",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "text": "-3x + 2",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Cuál es el valor de x en la ecuación 3(x - 2) = 15?",
+      "options": [
+        {
+          "id": 1,
+          "text": "5",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "6",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "7",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "8",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Cuál es el resultado de la simplificación de la expresión algebraica 4x^2 - 2x + 3x^2 - x?",
+      "options": [
+        {
+          "id": 1,
+          "text": "7x^2 - 3x",
+          "isCorrect": true
+          },
+          {
+          "id": 2,
+          "text": "x^2 + 4x",
+          "isCorrect": false
+          },
+          {
+          "id": 3,
+          "text": "5x^2 - 2x",
+          "isCorrect": false
+          },
+          {
+          "id": 4,
+          "text": "2x^2 + 2x",
+          "isCorrect": false
+          }
+          ]
+          },
+          {
+          "id": 6,
+          "text": "¿Cuál es el valor de x en la ecuación 2x + 5 = 3x - 2?",
+          "options": [
+          {
+          "id": 1,
+          "text": "5",
+          "isCorrect": true
+          },
+          {
+          "id": 2,
+          "text": "6",
+          "isCorrect": false
+          },
+          {
+          "id": 3,
+          "text": "7",
+          "isCorrect": false
+          },
+          {
+          "id": 4,
+          "text": "8",
+          "isCorrect": false
+          }
+          ]
+          }
+          ]
+          }
