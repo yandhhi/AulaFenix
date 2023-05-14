@@ -20,7 +20,7 @@ export default function VideoPlayer() {
         ref={video}
         style={styles.video}
         source={{
-          uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+          uri: 'file:///data/user/0/host.exp.exponent/files/ExperienceData/%2540yandhi%252FAulaFenix/1001_10013.mp4',
         }}
         useNativeControls
         resizeMode={ResizeMode.CONTAIN}
