@@ -1,35 +1,54 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, FlatList, TouchableOpacity, StyleSheet } from 'react-native';
-//import { useNavigation, useRoute } from '@react-navigation/native';
-import { storage, ref, getDownloadURL } from './firebaseConfig';
+import { useRoute } from '@react-navigation/native';
 
-const CourseContentScreen = ({ route, navigation }) => {
-  const { courseId } = route.params;
-  const { modulos } = route.params;
+const CourseContentScreen = ({ navigation }) => {
+  const route = useRoute();
+  const modulos = route.params?.modulos;
+  const courseId = route.params?.courseId;
+  const teoria = route.params?.teoria;
+  const quiz = route.params?.quiz;
   const [modules, setModules] = useState([]);
+  const [filteredTeoria, setFilteredTeoria] = useState([]);
+  const [filteredQuiz, setFilteredQuiz] = useState([]);
+
 
   useEffect(() => {
-    const modulesRef = ref(storage, `cursos/${courseId}/modulos.json`);
-    console.log(courseId)
-    console.log('Modulos desde contenidos', modulos)
 
-    getDownloadURL(modulesRef)
-      .then((url) => fetch(url))
-      .then((response) => response.json())
-      .then((data) => {
-        setModules(data);
-      })
-      .catch((error) => {
-        console.log('Error al obtener los datos de módulos:', error);
+    if (courseId && modulos && modulos.length > 0) {
+      const courseIdString = courseId.toString();
+
+      const filteredModules = modulos.flatMap(nestedArray =>
+        nestedArray.filter(item => item.id && item.id.toString().startsWith(courseIdString.substring(0, 4)))
+      );
+
+      setModules(filteredModules);
+
+      const filteredTeoria = teoria.filter(item => {
+        const pageId = item.pageid.toString();
+        return filteredModules.some(module => module.id.toString() === pageId);
       });
-  }, [courseId]);
 
-  const handleModulePress = () => {
-    navigation.navigate('Aprendizaje');
+      console.log('Teoria filtrada:', filteredTeoria);
+      setFilteredTeoria(filteredTeoria);
+
+    const filteredQuiz = quiz.filter(item => {
+        const quizId = item.quizid.toString();
+        return filteredModules.some(module => module.id.toString() === quizId);
+      });
+      console.log('quiz filtrado:', filteredQuiz);
+      setFilteredQuiz(filteredQuiz);
+    }
+  }, [courseId, modulos, teoria, quiz]);
+
+  const handleModulePress = (item) => {
+    const selectedTeoria = filteredTeoria.filter(teoriaItem => teoriaItem.pageid.toString() === item.id.toString());
+    const selectedQuiz = filteredQuiz.filter(quizItem => quizItem.quizid.toString() === item.id.toString());
+    navigation.navigate('Aprendizaje', { teoria: selectedTeoria, quiz: selectedQuiz });
   };
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.module} onPress={handleModulePress}>
+    <TouchableOpacity style={styles.module} onPress={() => handleModulePress(item)}>
       <Text style={styles.moduleText}>{item.name}</Text>
       <Text style={styles.moduleDescription}>{item.description}</Text>
     </TouchableOpacity>
@@ -48,6 +67,7 @@ const CourseContentScreen = ({ route, navigation }) => {
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {

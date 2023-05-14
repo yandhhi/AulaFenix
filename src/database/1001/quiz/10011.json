@@ -1,0 +1,266 @@
+{
+  "quizid": 10011,
+  "name": "Introducción a las matemáticas",
+  "description": "En esta lección, aprenderás los conceptos básicos de las matemáticas.",
+  "questions": [
+    {
+      "id": 1,
+      "text": "¿Cuál es el resultado de la suma 2 + 2?",
+      "options": [
+        {
+          "id": 1,
+          "text": "3",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "4",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "5",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "6",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "text": "¿Cuál es el resultado de la multiplicación 5 x 7?",
+      "options": [
+        {
+          "id": 1,
+          "text": "35",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "text": "42",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "49",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "56",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "text": "¿Cuál es el resultado de la división 10 ÷ 2?",
+      "options": [
+        {
+          "id": 1,
+          "text": "3",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "4",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "text": "5",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "6",
+          "isCorrect": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "text": "¿Cuánto es 8 multiplicado por 3?",
+      "options": [
+        {
+          "id": 1,
+          "text": "21",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "24",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "27",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "30",
+          "isCorrect": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "text": "¿Cuál es el resultado de la resta 15 - 7?",
+      "options": [
+        {
+          "id": 1,
+          "text": "7",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "text": "8",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "text": "9",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "text": "10",
+          "isCorrect": false
+        }
+      ]}, 
+          {
+          "id": 6,
+          "text": "¿Cuál es el resultado de la multiplicación 9 x 3?",
+          "options": [
+          {
+          "id": 1,
+          "text": "18",
+          "isCorrect": false
+          },
+          {
+          "id": 2,
+          "text": "24",
+          "isCorrect": true
+          },
+          {
+          "id": 3,
+          "text": "27",
+          "isCorrect": false
+          },
+          {
+          "id": 4,
+          "text": "30",
+          "isCorrect": false
+          }
+          ]
+          },
+          {
+          "id": 7,
+          "text": "¿Cuál es el resultado de la suma 7 + 9?",
+          "options": [
+          {
+          "id": 1,
+          "text": "14",
+          "isCorrect": true
+          },
+          {
+          "id": 2,
+          "text": "15",
+          "isCorrect": false
+          },
+          {
+          "id": 3,
+          "text": "16",
+          "isCorrect": false
+          },
+          {
+          "id": 4,
+          "text": "17",
+          "isCorrect": false
+          }
+          ]
+          },
+          {
+          "id": 8,
+          "text": "¿Cuál es el resultado de la resta 12 - 6?",
+          "options": [
+          {
+          "id": 1,
+          "text": "4",
+          "isCorrect": true
+          },
+          {
+          "id": 2,
+          "text": "5",
+          "isCorrect": false
+          },
+          {
+          "id": 3,
+          "text": "6",
+          "isCorrect": false
+          },
+          {
+          "id": 4,
+          "text": "7",
+          "isCorrect": false
+          }
+          ]
+          },
+          {
+          "id": 9,
+          "text": "¿Cuánto es 3 elevado a la potencia de 4?",
+          "options": [
+          {
+          "id": 1,
+          "text": "6",
+          "isCorrect": false
+          },
+          {
+          "id": 2,
+          "text": "9",
+          "isCorrect": false
+          },
+          {
+          "id": 3,
+          "text": "12",
+          "isCorrect": false
+          },
+          {
+          "id": 4,
+          "text": "81",
+          "isCorrect": true
+          }
+          ]
+          },
+          {
+          "id": 10,
+          "text": "¿Cuál es el resultado de la suma 25 + 18?",
+          "options": [
+          {
+          "id": 1,
+          "text": "38",
+          "isCorrect": true
+          },
+          {
+          "id": 2,
+          "text": "39",
+          "isCorrect": false
+          },
+          {
+          "id": 3,
+          "text": "40",
+          "isCorrect": false
+          },
+          {
+          "id": 4,
+          "text": "41",
+          "isCorrect": false
+          }
+          ]
+          }
+          ]
+          }

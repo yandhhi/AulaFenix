@@ -1,0 +1,108 @@
+{
+    "quizid": 30012,
+    "name": "Gramática castellana",
+    "description": "En esta lección, aprenderás los conceptos básicos de la gramática castellana.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "¿Cuál es la función del sujeto en una oración?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Realizar la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Recibir la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Indicar la persona, animal o cosa que realiza la acción del verbo",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Modificar al verbo",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "¿Cuál es la función del complemento directo en una oración?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Realizar la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Recibir la acción del verbo",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Indicar la persona, animal o cosa que realiza la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Modificar al verbo",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "¿Cuál es la función del complemento de lugar en una oración?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Realizar la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Recibir la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Indicar la persona, animal o cosa que realiza la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Indicar el lugar donde ocurre la acción del verbo",
+            "isCorrect": true
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "¿Cuál es la función del complemento de tiempo en una oración?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Realizar la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Recibir la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Indicar la persona, animal o cosa que realiza la acción del verbo",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Indicar el tiempo en que ocurre la acción del verbo",
+            "isCorrect": true
+          }]
+      }]}  

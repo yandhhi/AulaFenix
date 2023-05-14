@@ -1,0 +1,112 @@
+{
+    "quizid": 30011,
+    "name": "Introducción al idioma castellano",
+    "description": "En esta lección, aprenderás los conceptos básicos del idioma castellano.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "¿Cuál es el artículo definido masculino singular en español?",
+        "options": [
+          {
+            "id": 1,
+            "text": "El",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "La",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Un",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Una",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "¿Cuál es el verbo 'ser' en primera persona del singular en presente?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Eres",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Somos",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Soy",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Estoy",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "¿Cuál es el plural de la palabra 'casa'?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Casas",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Caso",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Caserío",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Caserón",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "¿Cuál es el antónimo de 'bueno'?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Malo",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Grande",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Feliz",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Nuevo",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  }
+  

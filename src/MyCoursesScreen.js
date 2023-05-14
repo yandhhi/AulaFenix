@@ -7,6 +7,8 @@ const MyCoursesScreen = () => {
   const route = useRoute();
   const materias = route.params?.materias;
   const modulos = route.params?.modulos;
+  const teoria = route.params?.teoria;
+  const quiz = route.params?.quiz;
 
   useEffect(() => {
     setCourses(materias);
@@ -15,52 +17,8 @@ const MyCoursesScreen = () => {
   const navigation = useNavigation();
 
   const handleCoursePress = (courseId) => {
-    navigation.navigate('Contenido', { courseId, modulos });
+    navigation.navigate('Contenido', { courseId, modulos, teoria, quiz });
   };
-
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-      backgroundColor: '#f7f7f7',
-      marginTop: 20
-    },
-    title: {
-      fontSize: 24,
-      fontWeight: 'bold',
-      marginVertical: 10,
-    },
-    courseContainer: {
-      backgroundColor: '#859bed',
-      padding: 10,
-      marginVertical: 10,
-      borderRadius: 10,
-      shadowColor: '#000',
-      shadowOffset: {
-        width: 0,
-        height: 2,
-      },
-      shadowOpacity: 0.25,
-      shadowRadius: 3.84,
-      elevation: 5,
-      width: '80%',
-      alignSelf: 'center',
-      marginHorizontal: 40,
-    },
-    courseName: {
-      fontSize: 20,
-      fontWeight: 'bold',
-      color: '#fff',
-      textAlign: 'center'
-    },
-    courseDescription: {
-      fontSize: 16,
-      color: '#fff',
-      marginTop: 10,
-      textAlign: 'center'
-    }
-  });
 
   const renderItem = ({ item }) => (
     <TouchableOpacity style={styles.courseContainer} onPress={() => handleCoursePress(item.id)}>
@@ -79,6 +37,51 @@ const MyCoursesScreen = () => {
       />
     </View>
   );
+
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#f7f7f7',
+    marginTop: 20
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginVertical: 10,
+  },
+  courseContainer: {
+    backgroundColor: '#859bed',
+    padding: 10,
+    marginVertical: 10,
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+    width: '80%',
+    alignSelf: 'center',
+    marginHorizontal: 40,
+  },
+  courseName: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#fff',
+    textAlign: 'center'
+  },
+  courseDescription: {
+    fontSize: 16,
+    color: '#fff',
+    marginTop: 10,
+    textAlign: 'center'
+  }
+});
 
 export default MyCoursesScreen;

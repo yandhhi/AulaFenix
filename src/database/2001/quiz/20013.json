@@ -1,0 +1,112 @@
+{
+    "quizid": 20013,
+    "name": "Vocabulario inglés",
+    "description": "En esta lección, aprenderás el vocabulario básico en inglés.",
+    "questions": [
+      {
+        "id": 1,
+        "text": "What is the English word for 'casa'?",
+        "options": [
+          {
+            "id": 1,
+            "text": "House",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Car",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Tree",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Book",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Which word means 'gato' in English?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Dog",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Cat",
+            "isCorrect": true
+          },
+          {
+            "id": 3,
+            "text": "Bird",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Mouse",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "What is the English word for 'rojo'?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Blue",
+            "isCorrect": false
+          },
+          {
+            "id": 2,
+            "text": "Yellow",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Red",
+            "isCorrect": true
+          },
+          {
+            "id": 4,
+            "text": "Green",
+            "isCorrect": false
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Which word means 'mesa' in English?",
+        "options": [
+          {
+            "id": 1,
+            "text": "Table",
+            "isCorrect": true
+          },
+          {
+            "id": 2,
+            "text": "Chair",
+            "isCorrect": false
+          },
+          {
+            "id": 3,
+            "text": "Bed",
+            "isCorrect": false
+          },
+          {
+            "id": 4,
+            "text": "Desk",
+            "isCorrect": false
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -8,6 +8,8 @@ const LoginScreen = ({ route, navigation }) => {
   const [showForm, setShowForm] = useState(false);
   const materias = route.params?.filteredPensum;
   const modulos = route.params?.modulesData;
+  const teoria = route.params?.modulesJsonData;
+  const quiz = route.params?.quizJsonData;
 
   const handleLogin = () => {
     signIn(auth, email, password)
@@ -25,7 +27,7 @@ const LoginScreen = ({ route, navigation }) => {
   };
 
   const handleAccessAula = () => {
-    navigation.navigate('Mis cursos', { materias, modulos });
+    navigation.navigate('Mis cursos', { materias, modulos, teoria, quiz });
   };
 
   return (
