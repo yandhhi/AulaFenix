@@ -10,14 +10,10 @@ import Teorico from './src/Teorico';
 import RelatedVideos from './src/RelatedVideos';
 import SyncScreen from './src/SyncScreen';
 
-import { Provider } from 'react-redux';
-import store from './src/store';
-
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
-    <Provider store={store}>
    <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Inicio" component={LoginScreen} options={{headerShown: false}}/>
@@ -30,7 +26,6 @@ const App = () => {
         <Stack.Screen name="Sincronizar" component={SyncScreen} />
       </Stack.Navigator>
     </NavigationContainer>
-    </Provider>
   );
 };
 
